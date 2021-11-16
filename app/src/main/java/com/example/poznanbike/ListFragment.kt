@@ -42,6 +42,7 @@ class ListFragment : Fragment() {
 
 
     fun showList(){
+        // SHows the list and sets the item click listener
         binding.updateInfo.visibility = View.INVISIBLE
         binding.progressBar.visibility = View.INVISIBLE
         with(binding.bikeStationsList) {
@@ -55,7 +56,7 @@ class ListFragment : Fragment() {
                     val actionListFragmentToDetailFragment =
                         ListFragmentDirections.actionListFragmentToDetailFragment(
                             bikeStation
-                        )
+                        ) // safe args are used to pass data between fragemnts
                     findNavController().navigate(actionListFragmentToDetailFragment)
                 }
 

@@ -1,8 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
-    id 'androidx.navigation.safeargs'
-    id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs'     // safe args plugin
+    id 'kotlin-kapt' // Kotlin annotation processor plugin
 }
 
 android {

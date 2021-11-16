@@ -15,6 +15,7 @@ class BikeStationsListAdapter(
     private val stations: ArrayList<BikeStation>,
     private val mListener: BikeStationListEventListener): RecyclerView.Adapter<BikeStationsListAdapter.ViewHolder>() {
     inner class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
+        // Setup the Views in ViewHolder
         val container: View = view.rootView
         val bikeImg: ImageView = view.findViewById<ImageView>(R.id.bikeImg)
         val parkImg: ImageView = view.findViewById<ImageView>(R.id.parkImg)
@@ -31,10 +32,12 @@ class BikeStationsListAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        // Populate the displayed elements and assign a listener for a click event
         val item = stations[position]
         val numBikes: Int = item.properties.bikes.toInt()
         holder.bikeNumber.text = item.properties.bikes
        val context = holder.container.context
+        // The number of bikes and racks impact the color of icons in each list entry
         when(numBikes){
             0 -> holder.bikeImg.setColorFilter(Helpers.getColor(context, R.color.my_red))
             in 1..5 -> holder.bikeImg.setColorFilter(Helpers.getColor(context, R.color.my_orange))
@@ -49,6 +52,8 @@ class BikeStationsListAdapter(
         }
         holder.stationName.text = item.properties.label
         holder.updateTime.text = item.properties.updated
+
+        // Delegate onClick event listener to mListener BikeStationListEventListener interface
         holder.container.setOnClickListener {
             mListener.clickListener(position,item)
         }

@@ -10,6 +10,7 @@ import androidx.navigation.fragment.NavHostFragment
 import com.example.poznanbike.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+    // view binding variable that allows for easy access to the Activities' Views
     private lateinit var binding: ActivityMainBinding
     lateinit var navController: NavController
     private var firstStart: Boolean = true
@@ -22,11 +23,12 @@ class MainActivity : AppCompatActivity() {
             if (!firstStart) {
                 binding.fab.hide()
             }
+            // Each time we change the navigation destination the menu will be invalidated
             invalidateOptionsMenu()
         })
 
         binding.fab.setOnClickListener {
-
+            // placeholder for the FAB click event implementation
             val navHostFragment: NavHostFragment? =
                 supportFragmentManager.findFragmentById(R.id.nav_host_fragment_content_main) as NavHostFragment?
             if (navController.currentDestination?.id == R.id.listFragment) {
@@ -46,7 +48,7 @@ class MainActivity : AppCompatActivity() {
         val navDestination =
             navController.currentDestination ?: return super.onPrepareOptionsMenu(menu)
         return if (navDestination!!.id == R.id.detailFragment) {
-            false
+            false // the menu disappears when the detailFragment is displayed
         } else {
             super.onPrepareOptionsMenu(menu)
         }
@@ -60,7 +62,7 @@ class MainActivity : AppCompatActivity() {
         if (navController.currentDestination?.id == R.id.listFragment) {
             val navHostFragment: NavHostFragment? =
                 supportFragmentManager.findFragmentById(R.id.nav_host_fragment_content_main) as NavHostFragment?
-
+            // Perform actions for different menu options
             when (item.itemId) {
                 R.id.get_all -> {
 
