@@ -56,41 +56,6 @@ object Helpers {
         return arrayList
     }
 
-    fun test() {
-        // OUTPUT: => I have 3 dogs and 2 cats
-        val numberOfDogs = 3
-        val numberOfCats = 2
-        val str = "I have $numberOfDogs" + " and $numberOfCats"
-
-        // Jaki będzie wynik wykonania tego kodu
-        val results = 21
-        when (results) {
-            0 -> println("No results")
-            in 1..39 -> println("Got results!")
-            else -> println("That's a lot of results")
-        }
-
-        // Jak zrozumieć poniższy kod
-        val adapter = binding.bikeStationsList.adapter ?: return
-
-
-    }
-
-    // Wskaż argumenty wymagane i domyślne funkcji.
-    fun myFunction(str: String, b: Boolean, c: Int = 9, d: Boolean = true): Int {
-        return 0
-    }
-
-    // Która z funkcji jest funkcją lambda
-    fun double(x: Int): Int = x * 2
-
-    fun double2(x: Int): Int {
-        return x * 2
-    }
-
-    val d = { x: Int -> x * 2 }
-
-
 
 
 }
