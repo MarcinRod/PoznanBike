@@ -16,7 +16,7 @@ import kotlinx.coroutines.*
  */
 class ListFragment : Fragment() {
 
-    private val bikeStations: List<BikeStation>? = null
+    private var bikeStations: List<BikeStation>? = null
     private lateinit var binding: FragmentListBinding
 
 
