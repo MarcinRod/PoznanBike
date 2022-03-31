@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.poznanbike.databinding.FragmentListBinding
-import com.example.poznanbike.network.BikeStation
 import kotlinx.coroutines.*
 
 /**

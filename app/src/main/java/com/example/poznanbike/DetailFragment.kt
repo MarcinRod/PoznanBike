@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import com.example.poznanbike.databinding.FragmentDetailBinding
-import com.example.poznanbike.network.BikeStation
+
 
 
 class DetailFragment : Fragment() {

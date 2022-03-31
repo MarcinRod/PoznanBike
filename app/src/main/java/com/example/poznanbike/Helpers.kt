@@ -2,8 +2,7 @@ package com.example.poznanbike
 
 import android.content.Context
 import android.os.Build
-import com.example.poznanbike.database.BikeStationDB
-import com.example.poznanbike.network.BikeStation
+
 
 // Set of helper functions that are common for entire project. A singleton pattern is used here,
 // so we don't need to create an instance of a Helper class
