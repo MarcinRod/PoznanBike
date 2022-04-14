@@ -34,9 +34,9 @@ object Helpers {
 
         val coors = listOf<Double>(bikeStationDB.longitude, bikeStationDB.latitude)
         return BikeStation(
-            BikeStation.Geometry(coors, "Point"),
+            Geometry(coors, "Point"),
             "id",
-            BikeStation.Properties(
+            Properties(
                 "Unknown",
                 bikeStationDB.bikes.toString(),
                 bikeStationDB.freeRacks.toString(),

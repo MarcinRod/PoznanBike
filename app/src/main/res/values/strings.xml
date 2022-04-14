@@ -6,4 +6,6 @@
     <string name="show_saved_with_racks">Show saved with racks</string>
     <string name="clear_saved_and_list">Clear saved and list</string>
     <string name="dummy_text">Very long name for preview purposes</string>
+    <string name="list_label">PoznanBike</string>
+    <string name="detail_label">Station Details</string>
 </resources>
